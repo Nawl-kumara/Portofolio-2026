@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Aufa Nawal Kumara Adi</title>
+
+    <!-- FAVICON / ICON URL -->
+    <link rel="icon" type="image/png" href="Assets/Projek/pp.jpeg">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        /* ==========================================
+   1. IMPORT FONT & KONSISTENSI VARIABEL (:ROOT)
+   ========================================== */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --mac-bg: #0d1117;
+            --mac-card-bg: rgba(22, 27, 34, 0.75);
+            --mac-border: rgba(255, 255, 255, 0.1);
+            --mac-text-main: #f0f6fc;
+            --mac-text-sub: #8b949e;
+            --accent-cyan: #38bdf8;
+            --accent-cyan-hover: #0284c7;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            background-color: var(--mac-bg);
+            color: var(--mac-text-main);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================
+   2. HERO / DASHBOARD SECTION
+   ========================================== */
+        #home {
+            padding: 120px 0 80px 0;
+            background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.08) 0%, rgba(13, 17, 23, 1) 60%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-greeting {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--accent-cyan);
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title-main {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: #ffffff;
+        }
+
+        .text-highlight-cyan {
+            color: var(--accent-cyan);
+            position: relative;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 4px;
+            height: 0.85em;
+            background-color: var(--accent-cyan);
+            margin-left: 4px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hero-subtitle-new {
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            color: var(--mac-text-sub);
+            max-width: 580px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .profile-img-ref {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 1px solid var(--mac-border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            filter: contrast(1.05) brightness(0.95);
+        }
+
+        .social-icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--mac-border);
+            color: var(--mac-text-sub);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .social-icon-btn:hover {
+            background: var(--accent-cyan);
+            color: #0d1117;
+            transform: translateY(-3px);
+            border-color: var(--accent-cyan);
+        }
+
+        .btn-cyan-primary {
+            background-color: var(--accent-cyan);
+            color: #0f172a;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 12px 28px;
+            border: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-cyan-primary:hover {
+            background-color: var(--accent-cyan-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 12px;
+            padding: 12px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-custom:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+   3. KETERAMPILAN UTAMA (SKILL BADGES)
+   ========================================== */
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* Jarak ikon & teks agar tidak mepet */
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--mac-border);
+            border-radius: 10px;
+            color: var(--mac-text-main);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .skill-badge i {
+            color: var(--accent-cyan);
+            font-size: 0.95rem;
+        }
+
+        .skill-badge:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+   4. MAC WINDOW & KARTU SERTIFIKAT / PROJEK
+   ========================================== */
+        .mac-window {
+            background: rgba(22, 27, 34, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--mac-border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .mac-window-header {
+            background: rgba(30, 36, 44, 0.8);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 1px solid var(--mac-border);
+        }
+
+        .mac-dots {
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .mac-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .mac-dot-close {
+            background-color: #ff5f56;
+        }
+
+        .mac-dot-minimize {
+            background-color: #ffbd2e;
+        }
+
+        .mac-dot-expand {
+            background-color: #27c93f;
+        }
+
+        .mac-window-title {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--mac-text-sub);
+            letter-spacing: 0.5px;
+        }
+
+        .card-apple {
+            background: var(--mac-card-bg);
+            border: 1px solid var(--mac-border);
+            border-radius: 14px;
+            overflow: hidden;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-apple:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-img-container {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background-color: #010409;
+            position: relative;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-apple:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+
+        /* ==========================================
+   5. DEKORASI DETAIL KARTU SERTIFIKAT
+   ========================================== */
+        .badge-cert {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--accent-cyan);
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
+        .cert-issuer-text {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .text-sub-custom {
+            color: var(--mac-text-sub);
+            font-size: 0.78rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <!-- NAVBAR MAC -->
+    <nav class="navbar navbar-expand-lg navbar-mac fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold d-flex align-items-center gap-2" href="#home">
+                <i class="fa-brands fa-apple text-white fs-5"></i> Aufa Nawal
+            </a>
+            <button class="navbar-toggler navbar-dark border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center text-lg-start">
+                    <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projek">Projek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sertifikat">Sertifikasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home">
+        <div class="container px-4">
+            <div class="row align-items-center g-5">
+
+                <!-- SISI KIRI: TEKS & CALL TO ACTION -->
+                <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="badge-greeting mb-3">
+                        <i class="fa-solid fa-hand me-1"></i> Hi, There!
+                    </div>
+
+                    <h1 class="hero-title-main mb-3">
+                        I'm <span class="text-highlight-cyan">Aufa Nawal<span class="typing-cursor"></span></span>
+                    </h1>
+
+                    <p class="hero-subtitle-new mb-4 ms-lg-0 mx-auto">
+                        Fresh Graduate D3 Teknik Komputer spesialisasi <strong class="text-white">Internet of Things
+                            (IoT)</strong>, <strong class="text-white">Machine learning</strong>, & <strong
+                            class="text-white">Web developer</strong> yang adaptif dan solutif.
+                    </p>
+
+                    <!-- SOSIAL MEDIA ICONS -->
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-2 mb-4">
+                        <a href="mailto:aufanawal24@gmail.com" class="social-icon-btn" title="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/aufanawal" target="_blank" class="social-icon-btn"
+                            title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/aufanawal" target="_blank" class="social-icon-btn" title="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+
+                    <!-- TOMBOL ACTION -->
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="#kontak" class="btn btn-cyan-primary">Hire Me</a>
+                        <a href="#projek" class="btn btn-outline-custom">Lihat Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- SISI KANAN: FOTO PORTRAIT (SAMA SEPERTI REFERENSI) -->
+                <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-wrapper">
+                        <img src="Assets/Projek/pp.jpeg" alt="Aufa Nawal Kumara Adi" class="profile-img-ref"
+                            onerror="this.src='https://via.placeholder.com/380x450?text=Aufa+Nawal'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- TENTANG SAYA -->
+    <section id="tentang" class="py-4 py-md-5">
+        <div class="container px-3 px-md-4">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p class="section-subtitle">Ringkasan profil profesional & latar belakang pendidikan</p>
+            </div>
+
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">About_Me.sys</div>
+                </div>
+                <div class="p-3 p-sm-4 p-md-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 mb-4 mb-lg-0">
+                            <p style="line-height: 1.8; color: var(--mac-text-sub); font-size: 0.95rem;">
+                                Lulusan D3 Teknik Komputer dari Universitas Harkat Negeri dengan spesialisasi di bidang
+                                Internet of Things (IoT) dan IT Support. Memiliki pengalaman praktis dalam menangani
+                                proyek smart
+                                home serta sistem monitoring otomatis berbasis IoT. Aktif sebagai freelancer yang
+                                terbiasa
+                                bekerja dengan target, adaptif, dan solutif.
+                            </p>
+                            <div class="row mt-4 g-3">
+                                <div class="col-12 col-sm-6">
+                                    <div class="p-3 rounded-3"
+                                        style="background: rgba(255,255,255,0.03); border: 1px solid var(--mac-border);">
+                                        <div class="fw-bold mb-1 text-white small">Pendidikan Utama</div>
+                                        <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">D3
+                                            Teknik Komputer - Universitas Harkat Negeri (2022 - 2025)</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="p-3 rounded-3"
+                                        style="background: rgba(255,255,255,0.03); border: 1px solid var(--mac-border);">
+                                        <div class="fw-bold mb-1 text-white small">Pendidikan Menengah</div>
+                                        <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Teknik
+                                            Kendaraan Ringan - SMK NU 01 Hasyim Asy'ari (2019 - 2022)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-section mt-4">
+                            <h5 class="fw-bold text-white mb-3 fs-6">Keterampilan Utama</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="skill-badge">
+                                    <i class="fa-solid fa-microchip"></i> Internet of Things
+                                </span>
+                                <span class="skill-badge">
+                                    <i class="fa-solid fa-memory"></i> Embedded System
+                                </span>
+                                <span class="skill-badge">
+                                    <i class="fa-solid fa-brain"></i> Machine Learning
+                                </span>
+                                <span class="skill-badge">
+                                    <i class="fa-solid fa-code"></i> Web Developer
+                                </span>
+                                <span class="skill-badge">
+                                    <i class="fa-solid fa-network-wired"></i> Jaringan
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN KERJA -->
+    <section id="pengalaman" class="py-4 py-md-5">
+        <div class="container px-3 px-md-4">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Pengalaman Kerja</h2>
+                <p class="section-subtitle">Jejak karier & pengalaman profesional</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="mac-window p-3 p-sm-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="timeline-mac-item">
+                            <span class="badge bg-primary mb-2 rounded-pill fw-normal"
+                                style="font-size: 0.75rem;">Agustus 2022 - Sekarang</span>
+                            <h5 class="fw-bold text-white mb-1 fs-6 fs-md-5">Teknisi Mesin Produksi</h5>
+                            <p class="small mb-2" style="color: var(--mac-accent);">PT. Menara Laut Bersatu — Kota
+                                Tegal, Jawa Tengah</p>
+                            <p class="small mb-0" style="color: var(--mac-text-sub);">Bertanggung jawab dalam
+                                pemeliharaan operasional, penyelesaian masalah teknis, dan kelancaran mesin-mesin
+                                produksi di lingkungan industri.</p>
+                        </div>
+
+                        <div class="timeline-mac-item mb-0">
+                            <span class="badge bg-secondary mb-2 rounded-pill fw-normal" style="font-size: 0.75rem;">Mei
+                                2024 - Juli 2024</span>
+                            <h5 class="fw-bold text-white mb-1 fs-6 fs-md-5">IT Support</h5>
+                            <p class="small mb-2" style="color: var(--mac-accent);">CV. Lumbung Barokah — Kab. Tegal,
+                                Jawa Tengah</p>
+                            <p class="small mb-0" style="color: var(--mac-text-sub);">Bertanggung jawab dalam
+                                pengelolaan inventaris aset IT perusahaan secara terstruktur melalui sistem IT Asset
+                                Management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJEK & PENCAPAIAN -->
+    <section id="projek" class="py-4 py-md-5">
+        <div class="container px-3 px-md-4">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Projek & Karya</h2>
+                <p class="section-subtitle">Klik pada kartu untuk melihat pratinjau gambar penuh</p>
+            </div>
+
+            <!-- PROJEK 1 -->
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">Projek_1_IoT_Monitoring.app</div>
+                </div>
+                <div class="p-3 p-md-4">
+                    <div class="mb-3">
+                        <h4 class="fw-bold text-white mb-1 fs-5 fs-md-4">Sistem Monitoring Penyiraman & Nutrisi Melati
+                            Berbasis IoT</h4>
+                        <p class="small mb-0" style="color: var(--mac-text-sub);">
+                            Projek Tugas Akhir D3 Teknik Komputer untuk mengotomatisasi penyiraman dan pemberian nutrisi
+                            tanaman melati menggunakan mikrokontroler NodeMCU ESP8266, sensor kelembapan tanah, dan Web
+                            Dashboard real-time.
+                        </p>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta5.jpeg', '1. Rangkaian Hardware')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta5.jpeg" alt="Hardware & Sensor"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Hardware'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">1. Rangkaian Hardware</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Rangkaian
+                                        skematik mikrokontroler ESP8266/Arduino, sensor kelembapan tanah YL-69, DHT22,
+                                        LCD, dan modul Relay.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta6.png', '2. Pemodelan Sistem (Use Case)')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta6.png" alt="Web Dashboard"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Dashboard'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">2. Pemodelan Sistem (Use Case)</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">
+                                        Perancangan alur interaksi pengguna dan aktor sistem menggunakan Use Case
+                                        Diagram.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta3.jpeg', '3. Prototipe Alat')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta3.jpeg" alt="Pemasangan Lapangan"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Instalasi'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">3. Prototipe Alat</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Konstruksi
+                                        fisik alat menggunakan rangka kustom yang mengintegrasikan wadah nutrisi dan
+                                        jalur pemipaan.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta7.png', '4. Interface Website')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta7.png" alt="Log Aktivitas"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Log'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">4. Interface Website</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Antarmuka
+                                        berbasis web untuk memantau status kelembapan tanah, jadwal otomatisasi, dan
+                                        sakelar manual.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta8.jpg', '5. Interface Website')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta8.jpg" alt="Log Aktivitas"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Log'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">5. Publikasi jurnal TA</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Jurnal
+                                        ilmiah mengenai otomatisasi sistem penyiraman dan pemantauan nutrisi tanaman
+                                        melati berbasis mikrokontroler & web.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/projekta9.jpeg', '6. Interface Website')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/projekta9.jpeg" alt="Log Aktivitas"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Log'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">6. Observasi lapangan</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Kegiatan
+                                        dilakukan sebelum perancangan alat maupun web
+                                        bertujuan agar mengetahui kebutuhan yang diperlukan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJEK 2 -->
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">Projek_2_Smart_Home.app</div>
+                </div>
+                <div class="p-3 p-md-4">
+                    <div class="mb-3">
+                        <h4 class="fw-bold text-white mb-1 fs-5 fs-md-4">Smart Home Mini System Berbasis Raspberry Pi
+                        </h4>
+                        <p class="small mb-0" style="color: var(--mac-text-sub);">
+                            SmartHome berbasis Raspberry Pi yang dirancang untuk efisiensi energi dan keamanan otomatis.
+                            Mengintegrasikan pemrosesan logika Python dengan antarmuka berbasis web.
+                        </p>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/smarthome1.jpeg', '1. Rangkaian Hardware')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/smarthome1.jpeg" alt="Prototipe Maket"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Maket'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">1. Rangkaian Hardware</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Integrasi
+                                        papan penguji dengan modul relay, lampu indikator, dan komponen elektronik ke
+                                        GPIO Raspberry Pi.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/smarthome2.jpeg', '2. Pengujian Alat')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/smarthome2.jpeg" alt="Modul Raspberry Pi"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Raspberry'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">2. Pengujian Alat</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Pengujian
+                                        kontrol saklar dengan antarmuka berbasis website.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/smarthome3.jpeg', '3. Web Interface')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/smarthome3.jpeg" alt="Pemrograman Python"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Python'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">3. Web Interface</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Tampilan
+                                        antarmuka kontrol berbasis web (ON/OFF) yang responsif dari smartphone.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/smarthome4.jpeg', '4. Otomatisasi & Log')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/smarthome4.jpeg" alt="Sistem Otomatisasi"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Otomatisasi'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">4. Otomatisasi & Log</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">Fitur
+                                        otomatisasi daya lampu berdasarkan instruksi jadwal dan pencatatan riwayat
+                                        penggunaan daya.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJEK 3 (DETEKSI TUMOR OTAK - COMPUTER VISION) -->
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">PROJEK_3_BRAIN_TUMOR_DETECTION.APP</div>
+                </div>
+                <div class="p-3 p-md-4">
+                    <!-- Main Title & Description -->
+                    <div class="mb-4">
+                        <h4 class="fw-bold text-white mb-2 fs-5 fs-md-4">
+                            Sistem Deteksi &amp; Klasifikasi Tumor Otak Berbasis Deep Learning (CNN)
+                        </h4>
+                        <p class="small mb-0" style="color: var(--mac-text-sub); line-height: 1.6;">
+                            Aplikasi pengolahan citra medis otomatis berbasis Convolutional Neural Network (CNN) untuk
+                            membantu
+                            mendeteksi serta mengklasifikasikan keberadaan tumor otak dari hasil pemindaian MRI &amp; CT
+                            Scan secara presisi.
+                        </p>
+                    </div>
+
+                    <!-- Cards Grid -->
+                    <div class="row g-3">
+                        <!-- Card 1 -->
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/cv1.png', '1. Deteksi Tumor (Positif)')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/cv1.png" alt="Deteksi Tumor Positif"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Deteksi+Positif'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">1. Deteksi Positif Tumor</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">
+                                        Pengujian sistem pada citra MRI yang teridentifikasi indikasi tumor ("Ada Citra
+                                        Tumor").
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/cv2.png', '2. Deteksi Tumor (Negatif)')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/cv2.png" alt="Deteksi Tumor Negatif"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Deteksi+Negatif'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">2. Deteksi Negatif Tumor</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">
+                                        Pengujian sistem pada citra MRI kondisi normal ("Tidak Ada Tumor").
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/cv3.png', '3. Struktur Dataset MRI')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/cv3.png" alt="Struktur Dataset Brain"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Dataset+Structure'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">3. Struktur Dataset AI</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">
+                                        Pengorganisasian data latih (training) dan data uji (testing) untuk klasifikasi
+                                        tumor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Projek/cv4.jpg', '4. Publikasi Jurnal Ilmiah')">
+                                <div class="card-img-container">
+                                    <img src="Assets/Projek/cv4.jpg" alt="Publikasi Jurnal Ilmiah"
+                                        onerror="this.src='https://via.placeholder.com/400x250?text=Jurnal+Ilmiah'">
+                                </div>
+                                <div class="p-3">
+                                    <div class="fw-bold text-white small mb-1">4. Publikasi Jurnal Ilmiah</div>
+                                    <div class="small" style="color: var(--mac-text-sub); font-size: 0.8rem;">
+                                        Dokumentasi &amp; publikasi riset ilmiah mengenai implementasi algoritma CNN
+                                        pada pemindaian MRI/CT Scan.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERTIFIKASI (TOTAL 5 SERTIFIKAT DENGAN JUDUL BARU) -->
+    <section id="sertifikat" class="py-4 py-md-5">
+        <div class="container px-3 px-md-4">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Sertifikasi</h2>
+                <p class="section-subtitle">Sertifikat keahlian profesional, kelulusan, dan pelatihan teknis (Klik untuk
+                    memperbesar)</p>
+            </div>
+
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">Certificates_Validation.sys</div>
+                </div>
+                <div class="p-3 p-md-4">
+                    <div class="row g-3">
+                        <!-- SERTIFIKAT 1 -->
+                        <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Sertif/sertif1.jpg', 'English Proficiency Test (EPT)')">
+                                <div class="card-img-container" style="height: 200px;">
+                                    <img src="Assets/Sertif/sertif1.jpg" alt="Sertifikat 1"
+                                        onerror="this.src='https://via.placeholder.com/500x300?text=Sertifikat+1'">
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-primary mb-2 rounded-pill fw-normal"
+                                        style="font-size: 0.75rem;">EPT Score</span>
+                                    <h5 class="fw-bold text-white mb-1 fs-6">English Proficiency Test (EPT)</h5>
+                                    <p class="small mb-2" style="color: var(--mac-accent);">Politeknik Harapan Bersama
+                                    </p>
+                                    <p class="small mb-0" style="color: var(--mac-text-sub);">Sertifikasi kemampuan
+                                        bahasa Inggris resmi dengan skor 553, mencakup pemahaman Listening, Structure &
+                                        Written Expression, serta Reading Comprehension.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERTIFIKAT 2 -->
+                        <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Sertif/sertif4.jpeg', 'HCIA-AI V3.5 Course (Artificial Intelligence)')">
+                                <div class="card-img-container" style="height: 200px;">
+                                    <img src="Assets/Sertif/sertif4.jpeg" alt="Sertifikat 2"
+                                        onerror="this.src='https://via.placeholder.com/500x300?text=Sertifikat+2'">
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-secondary mb-2 rounded-pill fw-normal"
+                                        style="font-size: 0.75rem;">HCIA-AI</span>
+                                    <h5 class="fw-bold text-white mb-1 fs-6">HCIA-AI V3.5 Course (Artificial
+                                        Intelligence)</h5>
+                                    <p class="small mb-2" style="color: var(--mac-accent);">Huawei Talent Online</p>
+                                    <p class="small mb-0" style="color: var(--mac-text-sub);">Sertifikasi kelulusan
+                                        kursus tingkat profesional dalam bidang Artificial Intelligence (AI), Machine
+                                        Learning, dan dasar-dasar Computer Vision.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERTIFIKAT 3 -->
+                        <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                            <div class="card-apple"
+                                onclick="openPreviewModal('Assets/Sertif/sertif2.jpeg', 'Sertifikat kompetensi jaringan')">
+                                <div class="card-img-container" style="height: 200px;">
+                                    <img src="Assets/Sertif/sertif2.jpeg" alt="Sertifikat 3"
+                                        onerror="this.src='https://via.placeholder.com/500x300?text=Sertifikat+3'">
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-info text-dark mb-2 rounded-pill fw-normal"
+                                        style="font-size: 0.75rem;">Sertifikasi Profesi</span>
+                                    <h5 class="fw-bold text-white mb-1 fs-6">Sertifikat kompetensi jaringan</h5>
+                                    <p class="small mb-2" style="color: var(--mac-accent);">LSP Informatika / BNSP
+                                    </p>
+                                    <p class="small mb-0" style="color: var(--mac-text-sub);">Sertifikat uji kompetensi
+                                        nasional yang memvalidasi keahlian dan standar profesional di bidang teknisi
+                                        jaringan, infrastruktur komputer, dan sistem IT.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 SERTIFIKAT BARIS BAWAH -->
+                        <div class="row g-3 mt-1">
+
+                            <!-- Sertifikat 4 (Bawah Kiri) -->
+                            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="card-apple h-100"
+                                    onclick="openPreviewModal('AAssets/Sertif/sertif3.jpeg', 'C# Intermediate')">
+                                    <div class="card-img-container">
+                                        <img src="Assets/Sertif/sertif3.jpeg" alt="C# Intermediate SoloLearn"
+                                            onerror="this.src='https://via.placeholder.com/400x250?text=C%23+Intermediate'">
+                                    </div>
+                                    <div class="p-3">
+                                        <span class="badge-cert mb-2">Programming</span>
+                                        <div class="fw-bold text-white small mb-1">C# Intermediate</div>
+                                        <div class="cert-issuer-text mb-2">SoloLearn</div>
+                                        <div class="small text-sub-custom">
+                                            Sertifikasi kelulusan tingkat menengah dalam pemrograman C#, mencakup konsep
+                                            OOP, struktur data, dan penanganan logika aplikasi.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sertifikat 5 (Bawah Tengah) -->
+                            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="card-apple h-100"
+                                    onclick="openPreviewModal('Assets/Sertif/sertif5.jpeg', 'HCIA-IoT V3.0 Course')">
+                                    <div class="card-img-container">
+                                        <img src="Assets/Sertif/sertif5.jpeg" alt="HCIA-IoT V3.0 Huawei"
+                                            onerror="this.src='https://via.placeholder.com/400x250?text=HCIA-IoT+V3.0'">
+                                    </div>
+                                    <div class="p-3">
+                                        <span class="badge-cert mb-2">HCIA-IoT</span>
+                                        <div class="fw-bold text-white small mb-1">HCIA-IoT V3.0 Course</div>
+                                        <div class="cert-issuer-text mb-2">Huawei Talent Online</div>
+                                        <div class="small text-sub-custom">
+                                            Sertifikasi profesional bidang Internet of Things (IoT) yang memvalidasi
+                                            pemahaman arsitektur sensor, komputasi edge, dan konektivitas jaringan.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sertifikat 6 (Bawah Kanan) -->
+                            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="card-apple h-100"
+                                    onclick="openPreviewModal('Assets/Sertif/sertif6.jpg', 'Pelatihan / Seminar IT')">
+                                    <div class="card-img-container">
+                                        <img src="Assets/Sertif/sertif6.jpg" alt="Sertifikat Pelatihan IT"
+                                            onerror="this.src='https://via.placeholder.com/400x250?text=Sertifikat+Kompetensi'">
+                                    </div>
+                                    <div class="p-3">
+                                        <span class="badge-cert mb-2">Sertifikat Akademik</span>
+                                        <div class="fw-bold text-white small mb-1">Sertifikat Digital Library &amp;
+                                            Literasi Informasi</div>
+                                        <div class="cert-issuer-text mb-2">Perpustakaan Politeknik Harapan Bersama</div>
+                                        <div class="small text-sub-custom">
+                                            Sertifikat kompetensi penelusuran informasi ilmiah, manajemen referensi, dan
+                                            pemanfaatan layanan perpustakaan digital.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- KONTAK INTERAKTIF -->
+    <section id="kontak" class="py-4 py-md-5">
+        <div class="container px-3 px-md-4">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Hubungi Saya</h2>
+                <p class="section-subtitle">Mari terhubung untuk kolaborasi atau peluang kerja</p>
+            </div>
+
+            <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title">Contact_Terminal.sh</div>
+                </div>
+                <div class="p-4 p-md-5 text-center">
+                    <div class="row justify-content-center g-4">
+
+                        <!-- EMAIL CARD -->
+                        <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                            <a href="mailto:aufanawal24@gmail.com"
+                                class="contact-card-link text-decoration-none d-block h-100">
+                                <div
+                                    class="p-4 rounded-3 h-100 card-apple d-flex flex-column justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-envelope fs-2 text-info mb-3"></i>
+                                        <h6 class="text-white fw-bold mb-1 fs-5">Email</h6>
+                                        <p class="small mb-3" style="color: var(--mac-text-sub);">aufanawal24@gmail.com
+                                        </p>
+                                    </div>
+                                    <span class="btn btn-sm btn-apple-secondary w-100 mt-2">
+                                        <i class="fa-solid fa-paper-plane me-1"></i> Kirim Email
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- LINKEDIN CARD -->
+                        <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <a href="https://www.linkedin.com/in/aufa-nawal-398029431?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                                target="_blank" rel="noopener noreferrer"
+                                class="contact-card-link text-decoration-none d-block h-100">
+                                <div
+                                    class="p-4 rounded-3 h-100 card-apple d-flex flex-column justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-brands fa-linkedin fs-2 text-info mb-3"></i>
+                                        <h6 class="text-white fw-bold mb-1 fs-5">LinkedIn</h6>
+                                        <p class="small mb-3" style="color: var(--mac-text-sub);">
+                                            linkedin.com/in/aufanawal</p>
+                                    </div>
+                                    <span class="btn btn-sm btn-apple-secondary w-100 mt-2">
+                                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Kunjungi Profil
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- GITHUB CARD -->
+                        <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                            <a href="https://github.com/Nawl-kumara" target="_blank" rel="noopener noreferrer"
+                                class="contact-card-link text-decoration-none d-block h-100">
+                                <div
+                                    class="p-4 rounded-3 h-100 card-apple d-flex flex-column justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-brands fa-github fs-2 text-info mb-3"></i>
+                                        <h6 class="text-white fw-bold mb-1 fs-5">GitHub</h6>
+                                        <p class="small mb-3" style="color: var(--mac-text-sub);">github.com/aufanawal
+                                        </p>
+                                    </div>
+                                    <span class="btn btn-sm btn-apple-secondary w-100 mt-2">
+                                        <i class="fa-solid fa-code me-1"></i> Lihat Repositori
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center border-top border-secondary border-opacity-25">
+        <div class="container">
+            <p class="small mb-0" style="color: var(--mac-text-sub);">
+                © 2026 Aufa Nawal Kumara Adi. Designed with macOS Aesthetics.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP PREVIEW GAMBAR (BOOTSTRAP MODAL) -->
+    <div class="modal fade modal-mac" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="mac-window-header">
+                    <div class="mac-dots">
+                        <div class="mac-dot mac-dot-close" data-bs-dismiss="modal" style="cursor: pointer;"></div>
+                        <div class="mac-dot mac-dot-minimize"></div>
+                        <div class="mac-dot mac-dot-expand"></div>
+                    </div>
+                    <div class="mac-window-title" id="modalImageTitle">Preview.jpg</div>
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-3">
+                    <img id="modalPreviewImage" src="" class="img-fluid rounded-3" alt="Preview"
+                        style="max-height: 75vh; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inisialisasi Pustaka Animasi AOS
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true
+        });
+
+        // FUNGSI UNTUK MEMBUKA MODAL PREVIEW GAMBAR
+        function openPreviewModal(imageSrc, title) {
+            document.getElementById('modalPreviewImage').src = imageSrc;
+            document.getElementById('modalImageTitle').innerText = title;
+            var previewModal = new bootstrap.Modal(document.getElementById('imagePreviewModal'));
+            previewModal.show();
+        }
+    </script>
+</body>
+
+</html>
