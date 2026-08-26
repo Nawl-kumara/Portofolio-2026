@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <style>
-        /* ==========================================
-   1. IMPORT FONT & KONSISTENSI VARIABEL (:ROOT)
-   ========================================== */
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
         :root {
@@ -44,12 +41,45 @@
             color: var(--mac-text-main);
             margin: 0;
             padding: 0;
+            padding-top: 70px;
+            /* Jarak aman dari fixed navbar */
             overflow-x: hidden;
         }
 
         /* ==========================================
-   2. HERO / DASHBOARD SECTION
-   ========================================== */
+           1. NAVBAR & NAVIGATION
+           ========================================== */
+        .navbar {
+            background-color: rgba(13, 17, 23, 0.95) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--mac-border, rgba(255, 255, 255, 0.1));
+            z-index: 1030;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--accent-cyan, #38bdf8) !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: rgba(13, 17, 23, 0.98) !important;
+                border: 1px solid var(--mac-border, rgba(255, 255, 255, 0.1));
+                border-radius: 12px;
+                padding: 15px;
+                margin-top: 10px;
+            }
+        }
+
+        /* ==========================================
+           2. HERO / DASHBOARD SECTION
+           ========================================== */
         #home {
             padding: 120px 0 80px 0;
             background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.08) 0%, rgba(13, 17, 23, 1) 60%);
@@ -203,13 +233,12 @@
         }
 
         /* ==========================================
-   3. KETERAMPILAN UTAMA (SKILL BADGES)
-   ========================================== */
+           3. KETERAMPILAN UTAMA (SKILL BADGES)
+           ========================================== */
         .skill-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            /* Jarak ikon & teks agar tidak mepet */
             padding: 8px 14px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--mac-border);
@@ -232,8 +261,8 @@
         }
 
         /* ==========================================
-   4. MAC WINDOW & KARTU SERTIFIKAT / PROJEK
-   ========================================== */
+           4. MAC WINDOW & KARTU SERTIFIKAT / PROJEK
+           ========================================== */
         .mac-window {
             background: rgba(22, 27, 34, 0.6);
             backdrop-filter: blur(12px);
@@ -327,8 +356,8 @@
         }
 
         /* ==========================================
-   5. DEKORASI DETAIL KARTU SERTIFIKAT
-   ========================================== */
+           5. DEKORASI DETAIL KARTU SERTIFIKAT
+           ========================================== */
         .badge-cert {
             display: inline-block;
             padding: 3px 10px;
@@ -341,9 +370,9 @@
         }
 
         .cert-issuer-text {
-            color: #94a3b8;
+            color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         .text-sub-custom {
@@ -351,16 +380,121 @@
             font-size: 0.78rem;
             line-height: 1.5;
         }
+
+        /* ==========================================
+           6. BAHASA & PEMROGRAMAN
+           ========================================== */
+        .lang-card {
+            background: var(--mac-card-bg);
+            border: 1px solid var(--mac-border);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .lang-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--mac-border);
+        }
+
+        .icon-lang {
+            font-size: 1.2rem;
+            color: var(--accent-cyan);
+        }
+
+        .lang-name {
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .lang-level {
+            color: var(--mac-text-sub);
+            font-size: 0.78rem;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--accent-cyan);
+            border-radius: 10px;
+        }
+
+        .tech-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--mac-border);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag i {
+            color: var(--accent-cyan);
+        }
+
+        .tech-tag:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           7. RESPONSIVE PENYESUAIAN HP
+           ========================================== */
+        @media (max-width: 767.98px) {
+            #home {
+                padding-top: 30px !important;
+                padding-bottom: 40px !important;
+                min-height: auto !important;
+                text-align: center;
+            }
+
+            .hero-title-main {
+                font-size: 2.1rem !important;
+                line-height: 1.25 !important;
+            }
+
+            .hero-subtitle-new {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .profile-img-ref {
+                max-width: 250px !important;
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
-    <!-- NAVBAR MAC -->
-    <nav class="navbar navbar-expand-lg navbar-mac fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white fw-bold d-flex align-items-center gap-2" href="#home">
-                <i class="fa-brands fa-apple text-white fs-5"></i> Aufa Nawal
+            <a class="navbar-brand" href="#home">
+                <span>Portfolio</span>
             </a>
             <button class="navbar-toggler navbar-dark border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
@@ -501,37 +635,66 @@
         </div>
     </section>
 
-    <!-- PENGALAMAN KERJA -->
-    <section id="pengalaman" class="py-4 py-md-5">
-        <div class="container px-3 px-md-4">
-            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
-                <h2 class="section-title">Pengalaman Kerja</h2>
-                <p class="section-subtitle">Jejak karier & pengalaman profesional</p>
+    <section id="languages" class="py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="mb-4">
+                <h4 class="fw-bold text-white mb-1">Bahasa &amp; Pemrograman</h4>
+                <p class="small" style="color: var(--mac-text-sub);">
+                    Bahasa komunikasi dan bahasa pemrograman yang dikuasai.
+                </p>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="mac-window p-3 p-sm-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-mac-item">
-                            <span class="badge bg-primary mb-2 rounded-pill fw-normal"
-                                style="font-size: 0.75rem;">Agustus 2022 - Sekarang</span>
-                            <h5 class="fw-bold text-white mb-1 fs-6 fs-md-5">Teknisi Mesin Produksi</h5>
-                            <p class="small mb-2" style="color: var(--mac-accent);">PT. Menara Laut Bersatu — Kota
-                                Tegal, Jawa Tengah</p>
-                            <p class="small mb-0" style="color: var(--mac-text-sub);">Bertanggung jawab dalam
-                                pemeliharaan operasional, penyelesaian masalah teknis, dan kelancaran mesin-mesin
-                                produksi di lingkungan industri.</p>
+            <div class="row g-3">
+                <!-- Kartu Bahasa Komunikasi -->
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="lang-card h-100">
+                        <div class="lang-card-header">
+                            <i class="fa-solid fa-language icon-lang"></i>
+                            <h6 class="text-white fw-bold mb-0">Bahasa Komunikasi</h6>
                         </div>
+                        <div class="lang-card-body">
+                            <!-- Bahasa Indonesia -->
+                            <div class="lang-item">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="lang-name">Bahasa Indonesia</span>
+                                    <span class="lang-level">Penutur Asli</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: 100%;"></div>
+                                </div>
+                            </div>
 
-                        <div class="timeline-mac-item mb-0">
-                            <span class="badge bg-secondary mb-2 rounded-pill fw-normal" style="font-size: 0.75rem;">Mei
-                                2024 - Juli 2024</span>
-                            <h5 class="fw-bold text-white mb-1 fs-6 fs-md-5">IT Support</h5>
-                            <p class="small mb-2" style="color: var(--mac-accent);">CV. Lumbung Barokah — Kab. Tegal,
-                                Jawa Tengah</p>
-                            <p class="small mb-0" style="color: var(--mac-text-sub);">Bertanggung jawab dalam
-                                pengelolaan inventaris aset IT perusahaan secara terstruktur melalui sistem IT Asset
-                                Management.</p>
+                            <!-- Bahasa Inggris -->
+                            <div class="lang-item mt-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="lang-name">Bahasa Inggris</span>
+                                    <span class="lang-level">Tingkat Menengah</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Bahasa Pemrograman -->
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="lang-card h-100">
+                        <div class="lang-card-header">
+                            <i class="fa-solid fa-code icon-lang"></i>
+                            <h6 class="text-white fw-bold mb-0">Bahasa Pemrograman &amp; Kode</h6>
+                        </div>
+                        <div class="lang-card-body">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML / CSS</span>
+                                <span class="tech-tag"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="tech-tag"><i class="fa-solid fa-code"></i> C#</span>
+                                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-tag"><i class="fa-solid fa-microchip"></i> C / C++</span>
+                                <span class="tech-tag"><i class="fa-brands fa-php"></i> PHP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -853,7 +1016,7 @@
         <div class="container px-3 px-md-4">
             <div class="text-center" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="section-title">Sertifikasi</h2>
-                <p class="section-subtitle">Sertifikat keahlian profesional, kelulusan, dan pelatihan teknis (Klik untuk
+                <p class="section-subtitle">Sertifikat keahlian profesional, dan pelatihan teknis (Klik untuk
                     memperbesar)</p>
             </div>
 
@@ -1009,7 +1172,7 @@
         <div class="container px-3 px-md-4">
             <div class="text-center" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="section-title">Hubungi Saya</h2>
-                <p class="section-subtitle">Mari terhubung untuk kolaborasi atau peluang kerja</p>
+                <p class="section-subtitle">Mari terhubung</p>
             </div>
 
             <div class="mac-window" data-aos="fade-up" data-aos-duration="1000">
@@ -1092,7 +1255,7 @@
     <footer class="py-4 text-center border-top border-secondary border-opacity-25">
         <div class="container">
             <p class="small mb-0" style="color: var(--mac-text-sub);">
-                © 2026 Aufa Nawal Kumara Adi. Designed with macOS Aesthetics.
+                © 2026 Aufa Nawal Kumara Adi. .
             </p>
         </div>
     </footer>
